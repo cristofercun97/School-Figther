@@ -1,11 +1,28 @@
 export const personajes =[
     {
-        nombre: 'Soldado Romano',
-        imagen: 'https://media2.giphy.com/media/1xmSRp4Ufqx9B98X4f/200w.gif?cid=82a1493beff0nxbmipxjh0a1y3wrtsv0hqkrpd0mlwd0jl2m&ep=v1_gifs_related&rid=200w.gif&ct=s'
+        nombre: 'El gato',
+        imagen: 'https://i.redd.it/pcmqtndq1f0b1.gif'
     },
     {
-        nombre: 'Soldado Barbaro',
-        imagen:'https://media0.giphy.com/media/ii7e1JgSrDuankMM6F/200w.gif?cid=6c09b952iji2pal69pamckj7pdmwyeq187m45k630liu5y1q&ep=v1_stickers_search&rid=200w.gif&ct=s'
+        nombre: 'La Rana',
+        imagen:'https://cdn.domestika.org/c_fill,dpr_auto,f_auto,q_auto,w_820/v1621556676/content-items/007/973/785/Sprites-K-F-all_Espera-original.gif?1621556676'
     },
 
+] 
+
+export const escenarios =[
+    {
+        nombre: 'Cascadas',
+        imagen: "https://i.pinimg.com/originals/ce/87/61/ce8761040fb8071f2aac7acb240d94a2.gif"
+        //imagen: 'https://i.pinimg.com/736x/42/37/22/4237225ef6046023423fc9cf345f25b2.jpg'
+    },
+    {
+        nombre: 'El Baño',
+        imagen: "https://i.pinimg.com/originals/cf/84/6f/cf846f865abd23a212af8d2ebb657923.gif"
+
+    },
+    {
+        nombre: 'El Patio',
+        imagen:"https://i0.wp.com/www.marcelopedra.com.ar/blog/wp-content/uploads/2013/10/animated-gifs-of-fighting-game-backgrounds-21.gif?resize=752%2C224&ssl=1"
+    }
 ]

@@ -13,9 +13,13 @@ const routes = [
     component: ()=> import('../views/VistaEscenarios.vue')
 },
 {
-    path: '/combate',
+    path: '/combate/:escenarioSeleccionado',
     name: 'combate',
-    component: ()=> import('../views/VistaCombate.vue')
+    component: ()=> import('../views/VistaCombate.vue'),
+    props: (route)=>({
+      escenarioSeleccionado: route.params.escenarioSeleccionado,
+      personajeSeleccionado: route.params.personajeSeleccionado
+    })
 },
 ]
 

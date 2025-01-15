@@ -6,18 +6,20 @@
     <div class="flex w-full justify-center items-center gap-6" >
         
         <select class="bg-white border border-gray-300 text-start rounded-lg focus:ring-blue-50 block w-1/3 scroll-pl-2.5" v-model="personaje1">
+            <option disabled value="">Selecciona un personaje</option>
             <option v-for="(personaje, index) in personajes " :key="index" :value="index">{{ personaje.nombre }}</option>
         </select>
         {{ personaje1 }}
 
 
         <select class="bg-white border border-gray-300 text-start rounded-lg focus:ring-blue-50 block w-1/3 scroll-pl-2.5" v-model="personaje2" >
+            <option disabled value="">Selecciona un personaje</option>
             <option v-for="(personaje, index) in personajes" :key="index" :value="index">{{ personaje.nombre }}</option>
         </select>
         {{ personaje2 }}
     </div>
     <div class="flex justify-center my-5">
-        <button class="bg-[#3DBC1E] text-white px-4 py-2 rounded font-bold" @click="$router.push('/escenarios')">Continuar</button>
+        <button class="bg-[#3DBC1E] text-white px-4 py-2 rounded font-bold" @click="continuar">Continuar</button>
     </div>
    </section>
 </template> 
@@ -31,6 +33,24 @@ export default{
             personajes: personajes,
             personaje1: '',
             personaje2: ''
+        }
+    },
+
+    methods :{
+        continuar(){
+            console.log(this.personaje1, this.personaje2)
+
+            if(String(this.personaje1 && this.personaje2)){
+                this.$router.push({
+                    name: 'escenarios',
+                    params:{
+                        personaje1: this.personajes[this.personaje1].imagen,
+                        personaje2: this.personajes[this.personaje2].imagen
+                    }
+                });
+            } else {
+                alert('Selecciona dos personajes para poder continuar')
+            }
         }
     }
 }
